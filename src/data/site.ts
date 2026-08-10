@@ -50,14 +50,17 @@ export const galleryImages = [
   ['/images/imported/DSCF1828--f056aa8b7.jpg', 'Ulkar seated in sunlight beside a chain-link fence'],
 ] as const;
 
+const parseDate = (value: string) =>
+  /^\d{4}-\d{2}-\d{2}$/.test(value) ? new Date(`${value}T12:00:00`) : new Date(value);
+
 export const formatDate = (value: string) => {
-  const parsed = new Date(value);
+  const parsed = parseDate(value);
   return Number.isNaN(parsed.valueOf())
     ? value
     : new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric', year: 'numeric' }).format(parsed);
 };
 
 export const yearFromDate = (value: string) => {
-  const parsed = new Date(value);
+  const parsed = parseDate(value);
   return Number.isNaN(parsed.valueOf()) ? 'Archive' : String(parsed.getFullYear());
 };

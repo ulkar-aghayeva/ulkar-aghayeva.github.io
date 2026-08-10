@@ -1,9 +1,8 @@
 <dialog class="image-lightbox" id="image-lightbox" aria-label="Expanded image">
   <div class="image-lightbox__frame">
-    <button class="image-lightbox__close" type="button">Close</button>
+    <button class="image-lightbox__close" type="button" aria-label="Close expanded image"></button>
     <figure>
       <img alt="" />
-      <figcaption hidden></figcaption>
     </figure>
   </div>
 </dialog>
@@ -11,11 +10,10 @@
 <script>
   const dialog = document.querySelector<HTMLDialogElement>('#image-lightbox');
   const expandedImage = dialog?.querySelector<HTMLImageElement>('img');
-  const caption = dialog?.querySelector<HTMLElement>('figcaption');
   const closeButton = dialog?.querySelector<HTMLButtonElement>('.image-lightbox__close');
   let activeTrigger: HTMLButtonElement | undefined;
 
-  if (dialog && expandedImage && caption && closeButton) {
+  if (dialog && expandedImage && closeButton) {
     document.querySelectorAll<HTMLImageElement>('.blog-article .article-header > img, .blog-article .article-body img').forEach((image) => {
       const trigger = document.createElement('button');
       const figureCaption = image.closest('figure')?.querySelector('figcaption')?.textContent?.trim();
@@ -24,7 +22,6 @@
       trigger.type = 'button';
       trigger.className = 'article-image-trigger';
       trigger.dataset.lightboxTrigger = '';
-      if (figureCaption) trigger.dataset.lightboxCaption = figureCaption;
       trigger.setAttribute('aria-label', `Expand ${description}`);
       image.replaceWith(trigger);
       trigger.append(image);
@@ -36,11 +33,8 @@
 
       trigger.addEventListener('click', () => {
         activeTrigger = trigger;
-        const description = trigger.dataset.lightboxCaption || image.alt;
         expandedImage.src = image.currentSrc || image.src;
         expandedImage.alt = image.alt;
-        caption.textContent = description;
-        caption.hidden = !description;
         dialog.showModal();
       });
     });

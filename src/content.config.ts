@@ -6,11 +6,12 @@ const articleSchema = z.object({
   title: z.string(),
   date: z.string(),
   kind: z.enum(['blog', 'project']),
-  sourceUrl: z.url(),
+  sourceUrl: z.url().optional(),
   featuredImage: z.string(),
   description: z.string(),
   previewDescription: z.string().optional(),
   order: z.number().int().positive().optional(),
+  format: z.enum(['html', 'markdown']).optional(),
 });
 
 export const collections = {

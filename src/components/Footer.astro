@@ -10,5 +10,8 @@ import { socialLinks } from '@/data/site';
   <nav aria-label="Social links">
     {socialLinks.map((item) => <a href={item.href} rel="noopener">{item.label}</a>)}
   </nav>
-  <p>Site logo by <a href="https://twitter.com/imperialauditor" rel="noopener">@imperialauditor</a></p>
+  <div class="footer-credits">
+    <p>Site logo by <a href="https://twitter.com/imperialauditor" rel="noopener">@imperialauditor</a></p>
+    <p>Site by <a href="https://github.com/rexmhall09" rel="noopener">rexmhall09</a></p>
+  </div>
 </footer>

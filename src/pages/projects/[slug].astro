@@ -1,5 +1,5 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { formatDate, sortProjects } from '@/data/site';
 
@@ -14,6 +14,7 @@ const position = orderedProjects.findIndex((entry) => entry.id === project.id);
 const previous = position > 0 ? orderedProjects[position - 1] : undefined;
 const next = position < orderedProjects.length - 1 ? orderedProjects[position + 1] : undefined;
 const description = (project.data.description || `A project by Ulkar Aghayeva: ${project.data.title}`).slice(0, 220);
+const MarkdownContent = project.data.format === 'markdown' ? (await render(project)).Content : null;
 ---
 
 <BaseLayout title={project.data.title} description={description} image={project.data.featuredImage} article publishedTime={project.data.date}>
@@ -25,7 +26,9 @@ const description = (project.data.description || `A project by Ulkar Aghayeva: $
       <time datetime={project.data.date}>{formatDate(project.data.date)}</time>
       {project.data.featuredImage && <img src={project.data.featuredImage} alt="" />}
     </header>
-    <article class="prose article-body" set:html={project.body}></article>
+    <article class="prose article-body">
+      {MarkdownContent ? <MarkdownContent /> : <Fragment set:html={project.body} />}
+    </article>
     <nav class="project-pagination" aria-label="Project navigation">
       {previous ? <a href={`/projects/${previous.id}`}><span>Previous</span>{previous.data.title}</a> : <span></span>}
       {next && <a href={`/projects/${next.id}`}><span>Next</span>{next.data.title}</a>}

@@ -1,5 +1,5 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import ImageLightbox from '@/components/ImageLightbox.astro';
 import { formatDate } from '@/data/site';
@@ -11,6 +11,7 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const description = (post.data.description || `An essay by Ulkar Aghayeva: ${post.data.title}`).slice(0, 220);
+const MarkdownContent = post.data.format === 'markdown' ? (await render(post)).Content : null;
 ---
 
 <BaseLayout title={post.data.title} description={description} image={post.data.featuredImage} article publishedTime={post.data.date}>
@@ -22,7 +23,9 @@ const description = (post.data.description || `An essay by Ulkar Aghayeva: ${pos
       <time datetime={post.data.date}>{formatDate(post.data.date)}</time>
       {post.data.featuredImage && <img src={post.data.featuredImage} alt="" />}
     </header>
-    <article class="prose article-body" set:html={post.body}></article>
+    <article class="prose article-body">
+      {MarkdownContent ? <MarkdownContent /> : <Fragment set:html={post.body} />}
+    </article>
     <nav class="article-end" aria-label="Article navigation"><a href="/blog">Return to all writing</a></nav>
   </main>
   <ImageLightbox />

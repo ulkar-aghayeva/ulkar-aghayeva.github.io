@@ -11,9 +11,11 @@ npm run dev
 
 Use `npm run build` for the production build and `npm run verify` for route, metadata, content, and asset checks. The migration snapshot can be refreshed from the live Squarespace source with `npm run migrate`.
 
-## Editing previews
+## Adding and editing content
 
-Each blog post and project lives in its own Markdown file under `src/content/blog` or `src/content/projects`. Add a short, custom archive summary to any entry with:
+Posts and projects can be written in normal Markdown and added entirely through GitHub’s website. See [CONTENT_GUIDE.md](CONTENT_GUIDE.md) for the short step-by-step guide and copy one of the files in `content-templates` when starting something new.
+
+Each blog post and project lives in its own Markdown file under `src/content/blog` or `src/content/projects`. A custom archive summary is optional:
 
 ```yaml
 previewDescription: "A concise preview written specifically for the archive."

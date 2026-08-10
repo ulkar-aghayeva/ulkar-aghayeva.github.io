@@ -16,7 +16,6 @@ import { galleryImages } from '@/data/site';
           type="button"
           class:list={['gallery-image-trigger', { 'gallery-wide': index === 4 }]}
           data-lightbox-trigger
-          data-lightbox-caption={alt}
           aria-label={`Expand image: ${alt}`}
         >
           <img src={src} alt={alt} loading={index < 4 ? 'eager' : 'lazy'} />
