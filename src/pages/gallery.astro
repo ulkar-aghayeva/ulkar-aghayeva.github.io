@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import ImageLightbox from '@/components/ImageLightbox.astro';
 import { galleryImages } from '@/data/site';
 ---
 
@@ -11,10 +12,17 @@ import { galleryImages } from '@/data/site';
     </header>
     <div class="gallery-grid">
       {galleryImages.map(([src, alt], index) => (
-        <a href={src} class:list={{ 'gallery-wide': index === 4 }} aria-label={`View full-size image: ${alt}`}>
+        <button
+          type="button"
+          class:list={['gallery-image-trigger', { 'gallery-wide': index === 4 }]}
+          data-lightbox-trigger
+          data-lightbox-caption={alt}
+          aria-label={`Expand image: ${alt}`}
+        >
           <img src={src} alt={alt} loading={index < 4 ? 'eager' : 'lazy'} />
-        </a>
+        </button>
       ))}
     </div>
   </main>
+  <ImageLightbox />
 </BaseLayout>

@@ -1,15 +1,15 @@
-<dialog class="image-lightbox" id="blog-image-lightbox" aria-label="Expanded article image">
+<dialog class="image-lightbox" id="image-lightbox" aria-label="Expanded image">
   <div class="image-lightbox__frame">
     <button class="image-lightbox__close" type="button">Close</button>
     <figure>
-      <img src="" alt="" />
+      <img alt="" />
       <figcaption hidden></figcaption>
     </figure>
   </div>
 </dialog>
 
 <script>
-  const dialog = document.querySelector<HTMLDialogElement>('#blog-image-lightbox');
+  const dialog = document.querySelector<HTMLDialogElement>('#image-lightbox');
   const expandedImage = dialog?.querySelector<HTMLImageElement>('img');
   const caption = dialog?.querySelector<HTMLElement>('figcaption');
   const closeButton = dialog?.querySelector<HTMLButtonElement>('.image-lightbox__close');
@@ -23,16 +23,24 @@
 
       trigger.type = 'button';
       trigger.className = 'article-image-trigger';
+      trigger.dataset.lightboxTrigger = '';
+      if (figureCaption) trigger.dataset.lightboxCaption = figureCaption;
       trigger.setAttribute('aria-label', `Expand ${description}`);
       image.replaceWith(trigger);
       trigger.append(image);
+    });
+
+    document.querySelectorAll<HTMLButtonElement>('[data-lightbox-trigger]').forEach((trigger) => {
+      const image = trigger.querySelector<HTMLImageElement>('img');
+      if (!image) return;
 
       trigger.addEventListener('click', () => {
         activeTrigger = trigger;
+        const description = trigger.dataset.lightboxCaption || image.alt;
         expandedImage.src = image.currentSrc || image.src;
         expandedImage.alt = image.alt;
-        caption.textContent = figureCaption || '';
-        caption.hidden = !figureCaption;
+        caption.textContent = description;
+        caption.hidden = !description;
         dialog.showModal();
       });
     });

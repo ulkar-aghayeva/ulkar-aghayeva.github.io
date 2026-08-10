@@ -89,8 +89,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .section-heading .text-link { font-family: var(--sans); font-size: .9rem; }
 .project-program { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--black); }
 .project-program li { border-bottom: 1px solid var(--black); }
-.project-program a { position: relative; isolation: isolate; display: grid; grid-template-columns: 36px 64px 1fr 24px; gap: 16px; align-items: center; min-height: 96px; padding: 16px 0; text-decoration: none; }
-.project-program a::before { content: ''; position: absolute; z-index: -1; inset: 6px 0; background: rgba(134, 31, 36, .055); box-shadow: inset 3px 0 0 rgba(134, 31, 36, .82); opacity: 0; transition: opacity 180ms ease; }
+.project-program a { position: relative; isolation: isolate; display: grid; grid-template-columns: 36px 64px 1fr 24px; gap: 16px; align-items: center; min-height: 96px; padding: 16px clamp(16px, 1.6vw, 24px); text-decoration: none; }
+.project-program a::before { content: ''; position: absolute; z-index: -1; inset: 6px 0; background: rgba(134, 31, 36, .055); box-shadow: inset 3px 0 0 rgba(134, 31, 36, .82), inset -3px 0 0 rgba(134, 31, 36, .82); opacity: 0; transition: opacity 180ms ease; }
 .project-program a:hover::before, .project-program a:focus-visible::before { opacity: 1; }
 .project-program a:hover .program-title, .project-program a:focus-visible .program-title { color: var(--red); }
 .project-program img { width: 64px; height: 64px; object-fit: contain; background: var(--ivory); filter: grayscale(.7); opacity: .84; transition: filter 180ms ease, opacity 180ms ease; }
@@ -128,8 +128,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .archive-entry__copy p { color: var(--graphite); }
 .archive-entry:hover .archive-entry__copy h2, .archive-entry:focus-visible .archive-entry__copy h2,
 .archive-entry:hover .archive-entry__copy h3, .archive-entry:focus-visible .archive-entry__copy h3 { color: var(--red); }
-.archive-entry--project { position: relative; isolation: isolate; display: grid; gap: 16px; padding: 32px 0; }
-.archive-entry--project::before { content: ''; position: absolute; z-index: -1; inset: 10px 0; background: rgba(134, 31, 36, .055); box-shadow: inset 4px 0 0 rgba(134, 31, 36, .82); opacity: 0; transition: opacity 180ms ease; }
+.archive-entry--project { position: relative; isolation: isolate; display: grid; gap: 16px; padding: 32px clamp(16px, 1.6vw, 24px); }
+.archive-entry--project::before { content: ''; position: absolute; z-index: -1; inset: 10px 0; background: rgba(134, 31, 36, .055); box-shadow: inset 4px 0 0 rgba(134, 31, 36, .82), inset -4px 0 0 rgba(134, 31, 36, .82); opacity: 0; transition: opacity 180ms ease; }
 .archive-entry--project:hover::before, .archive-entry--project:focus-visible::before { opacity: 1; }
 .archive-entry--project img { width: 100%; aspect-ratio: 16 / 9; object-fit: contain; background: var(--ivory); filter: grayscale(1); transition: filter 180ms ease; }
 .archive-entry--project:hover img, .archive-entry--project:focus-visible img { filter: grayscale(0); }
@@ -153,9 +153,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .blog-archive .archive-entry__copy p { max-width: 62ch; overflow: hidden; font-family: var(--sans); font-size: .84rem; line-height: 1.4; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
 
 .gallery-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
-.gallery-grid a { display: block; overflow: hidden; background: var(--ivory); }
+.gallery-image-trigger { display: block; width: 100%; padding: 0; overflow: hidden; background: var(--ivory); border: 0; border-radius: 0; cursor: zoom-in; }
 .gallery-grid img { width: 100%; height: 100%; aspect-ratio: 3 / 4; object-fit: cover; transition: transform 180ms ease; }
-.gallery-grid a:hover img, .gallery-grid a:focus-visible img { transform: scale(1.015); }
+.gallery-image-trigger:hover img, .gallery-image-trigger:focus-visible img { transform: scale(1.015); }
 .gallery-grid .gallery-wide { grid-column: 1 / -1; }
 .gallery-grid .gallery-wide img { aspect-ratio: 16 / 9; }
 
