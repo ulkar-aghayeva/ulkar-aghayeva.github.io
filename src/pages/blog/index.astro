@@ -1,7 +1,8 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import { formatDate, yearFromDate } from '@/data/site';
+import ArchiveEntry from '@/components/ArchiveEntry.astro';
+import { formatDate, getPreviewDescription, yearFromDate } from '@/data/site';
 
 const posts = (await getCollection('blog')).sort((a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf());
 const years = [...new Set(posts.map((post) => yearFromDate(post.data.date)))];
@@ -21,11 +22,15 @@ const years = [...new Set(posts.map((post) => yearFromDate(post.data.date)))];
           <ol>
             {posts.filter((post) => yearFromDate(post.data.date) === year).map((post) => (
               <li>
-                <a href={`/blog/${post.id}`}>
-                  <time datetime={post.data.date}>{formatDate(post.data.date)}</time>
-                  <img src={post.data.featuredImage} alt="" loading="lazy" />
-                  <span>{post.data.title}</span>
-                </a>
+                <ArchiveEntry
+                  variant="blog"
+                  href={`/blog/${post.id}`}
+                  title={post.data.title}
+                  date={post.data.date}
+                  formattedDate={formatDate(post.data.date)}
+                  image={post.data.featuredImage}
+                  description={getPreviewDescription(post.data, 'Read the complete essay.')}
+                />
               </li>
             ))}
           </ol>

@@ -2,6 +2,7 @@
 title: "Composition"
 date: "2021-12-15T17:50:00-0500"
 kind: "project"
+order: 5
 sourceUrl: "https://www.ulkaraghayeva.com/projects/composition"
 featuredImage: "/images/imported/ua_mus_tr-681f7a05f.png"
 description: ""

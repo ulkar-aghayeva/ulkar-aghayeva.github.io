@@ -2,6 +2,7 @@
 title: "Science writing"
 date: "2026-04-11T09:07:17-0400"
 kind: "project"
+order: 1
 sourceUrl: "https://www.ulkaraghayeva.com/projects/science-writing"
 featuredImage: "/images/imported/Cabinet_of_Curiosities_1690s_Domenico_Remps-a47d1992f.jpg"
 description: "A Brief History of Lab Notebooks .  Asimov Press  (2026)   Why Are Viral Capsids Icosahedral?   Asimov Press  (2026)   Science and Culture, Part II: The Arnold-Huxley Debate . Elicit Blog (2026)   Science and Culture, Part I: A History of Terms . Elicit Blog (2025)   What Makes an Experiment Beautif"

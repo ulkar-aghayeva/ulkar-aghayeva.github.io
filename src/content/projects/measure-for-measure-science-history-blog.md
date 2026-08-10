@@ -2,6 +2,7 @@
 title: "Measure for Measure - science history blog"
 date: "2023-10-16T13:50:54-0400"
 kind: "project"
+order: 2
 sourceUrl: "https://www.ulkaraghayeva.com/projects/measure-for-measure-science-history-blog"
 featuredImage: "/images/imported/IMG_3698-3f46c7e77.jpeg"
 description: "In the past few years, there has been a flourishing of the intellectual blogosphere, especially in the metascience field. I’ve been greatly inspired by the blogs by  Matt Clancy ,  Anton Howes ,  Michael Nielsen ,  Stuart Ritchie ,  Tim Hwang  and  Santi Ruiz , to name a few. Reading these blogs mad"

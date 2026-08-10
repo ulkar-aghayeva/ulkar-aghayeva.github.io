@@ -1,3 +1,5 @@
+import type { CollectionEntry } from 'astro:content';
+
 export const nav = [
   { href: '/about', label: 'About' },
   { href: '/projects', label: 'Projects' },
@@ -12,13 +14,21 @@ export const socialLinks = [
   { href: 'https://soundcloud.com/ulkar-aghayeva/fugue-chahargah-segah', label: 'SoundCloud' },
 ];
 
-export const projectOrder = [
-  'science-writing',
-  'measure-for-measure-science-history-blog',
-  'piano-recordings',
-  'secret-project',
-  'composition',
-];
+export const sortProjects = (projects: CollectionEntry<'projects'>[]) =>
+  [...projects].sort((a, b) => (a.data.order ?? Number.MAX_SAFE_INTEGER) - (b.data.order ?? Number.MAX_SAFE_INTEGER));
+
+export const getPreviewDescription = (
+  data: { previewDescription?: string; description?: string },
+  fallback: string,
+) => {
+  const customPreview = data.previewDescription?.trim();
+  if (customPreview) return customPreview;
+
+  const importedPreview = data.description?.replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim();
+  if (!importedPreview) return fallback;
+  if (importedPreview.length <= 180) return importedPreview;
+  return `${importedPreview.slice(0, 177).trimEnd()}…`;
+};
 
 export const galleryImages = [
   ['/images/imported/-DSC09421-6d9bcb335.jpg', 'Ulkar standing beside a red and black mural in Brooklyn'],

@@ -9,6 +9,8 @@ const articleSchema = z.object({
   sourceUrl: z.url(),
   featuredImage: z.string(),
   description: z.string(),
+  previewDescription: z.string().optional(),
+  order: z.number().int().positive().optional(),
 });
 
 export const collections = {

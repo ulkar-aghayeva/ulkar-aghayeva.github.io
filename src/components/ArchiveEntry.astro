@@ -1,0 +1,31 @@
+---
+interface Props {
+  variant: 'blog' | 'project';
+  href: string;
+  title: string;
+  date: string;
+  formattedDate: string;
+  image: string;
+  description: string;
+  number?: string;
+}
+
+const { variant, href, title, date, formattedDate, image, description, number } = Astro.props;
+const Heading = variant === 'blog' ? 'h3' : 'h2';
+---
+
+<a class:list={['archive-entry', `archive-entry--${variant}`]} href={href}>
+  {variant === 'project' ? (
+    <div class="archive-entry__meta">
+      <span>{number}</span>
+      <time datetime={date}>{formattedDate}</time>
+    </div>
+  ) : (
+    <time datetime={date}>{formattedDate}</time>
+  )}
+  <img src={image} alt="" loading="lazy" />
+  <div class="archive-entry__copy">
+    <Heading>{title}</Heading>
+    <p>{description}</p>
+  </div>
+</a>

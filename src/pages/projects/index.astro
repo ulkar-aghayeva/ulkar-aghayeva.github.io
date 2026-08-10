@@ -1,10 +1,11 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import { formatDate, projectOrder } from '@/data/site';
+import ArchiveEntry from '@/components/ArchiveEntry.astro';
+import { formatDate, getPreviewDescription, sortProjects } from '@/data/site';
 
 const entries = await getCollection('projects');
-const projects = projectOrder.map((id) => entries.find((entry) => entry.id === id)).filter(Boolean);
+const projects = sortProjects(entries);
 ---
 
 <BaseLayout title="Projects" description="Science writing, music history, piano recordings, interviews, and composition by Ulkar Aghayeva.">
@@ -15,14 +16,18 @@ const projects = projectOrder.map((id) => entries.find((entry) => entry.id === i
       <p>Writing and listening across science history, metascience, performance, and composition.</p>
     </header>
     <ol class="project-index">
-      {projects.map((project, index) => project && (
+      {projects.map((project, index) => (
         <li>
-          <a href={`/projects/${project.id}`}>
-            <div class="project-index__meta"><span>0{index + 1}</span><time>{formatDate(project.data.date)}</time></div>
-            <img src={project.data.featuredImage} alt="" loading="lazy" />
-            <h2>{project.data.title}</h2>
-            <p>{project.data.description || 'Read the complete project notes and listen to the recordings.'}</p>
-          </a>
+          <ArchiveEntry
+            variant="project"
+            href={`/projects/${project.id}`}
+            title={project.data.title}
+            date={project.data.date}
+            formattedDate={formatDate(project.data.date)}
+            image={project.data.featuredImage}
+            description={getPreviewDescription(project.data, 'Read the complete project notes and listen to the recordings.')}
+            number={String(index + 1).padStart(2, '0')}
+          />
         </li>
       ))}
     </ol>

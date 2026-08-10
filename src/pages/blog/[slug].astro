@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import ImageLightbox from '@/components/ImageLightbox.astro';
 import { formatDate } from '@/data/site';
 
 export async function getStaticPaths() {
@@ -13,7 +14,7 @@ const description = (post.data.description || `An essay by Ulkar Aghayeva: ${pos
 ---
 
 <BaseLayout title={post.data.title} description={description} image={post.data.featuredImage} article publishedTime={post.data.date}>
-  <main id="main" class="article-shell">
+  <main id="main" class="article-shell blog-article">
     <header class="article-header">
       <a class="back-link" href="/blog">← Blog archive</a>
       <p class="eyebrow">Essay</p>
@@ -24,4 +25,5 @@ const description = (post.data.description || `An essay by Ulkar Aghayeva: ${pos
     <article class="prose article-body" set:html={post.body}></article>
     <nav class="article-end" aria-label="Article navigation"><a href="/blog">Return to all writing</a></nav>
   </main>
+  <ImageLightbox />
 </BaseLayout>

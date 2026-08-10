@@ -1,10 +1,10 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import { nav, projectOrder } from '@/data/site';
+import { nav, sortProjects } from '@/data/site';
 
 const entries = await getCollection('projects');
-const projects = projectOrder.map((id) => entries.find((entry) => entry.id === id)).filter(Boolean);
+const projects = sortProjects(entries);
 ---
 
 <BaseLayout home>
@@ -34,7 +34,7 @@ const projects = projectOrder.map((id) => entries.find((entry) => entry.id === i
           <img src="/images/imported/UA_music_inv-5f8f7c599.jpg" alt="" width="72" height="54" />
           <p class="eyebrow">Science & music</p>
           <h1>Ulkar Aghayeva</h1>
-          <p>science history, metascience, composition</p>
+          <p>science writer and composer</p>
         </div>
       </div>
     </section>
@@ -52,7 +52,7 @@ const projects = projectOrder.map((id) => entries.find((entry) => entry.id === i
               <span class="program-number">{String(index + 1).padStart(2, '0')}</span>
               <img src={project.data.featuredImage} alt="" loading="lazy" />
               <span class="program-title">{project.data.title}</span>
-              <span class="program-arrow" aria-hidden="true">↗</span>
+              <span class="program-arrow" aria-hidden="true"></span>
             </a>
           </li>
         ))}

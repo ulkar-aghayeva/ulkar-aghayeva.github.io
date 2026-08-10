@@ -1,0 +1,49 @@
+<dialog class="image-lightbox" id="blog-image-lightbox" aria-label="Expanded article image">
+  <div class="image-lightbox__frame">
+    <button class="image-lightbox__close" type="button">Close</button>
+    <figure>
+      <img src="" alt="" />
+      <figcaption hidden></figcaption>
+    </figure>
+  </div>
+</dialog>
+
+<script>
+  const dialog = document.querySelector<HTMLDialogElement>('#blog-image-lightbox');
+  const expandedImage = dialog?.querySelector<HTMLImageElement>('img');
+  const caption = dialog?.querySelector<HTMLElement>('figcaption');
+  const closeButton = dialog?.querySelector<HTMLButtonElement>('.image-lightbox__close');
+  let activeTrigger: HTMLButtonElement | undefined;
+
+  if (dialog && expandedImage && caption && closeButton) {
+    document.querySelectorAll<HTMLImageElement>('.blog-article .article-header > img, .blog-article .article-body img').forEach((image) => {
+      const trigger = document.createElement('button');
+      const figureCaption = image.closest('figure')?.querySelector('figcaption')?.textContent?.trim();
+      const description = figureCaption || image.alt || 'article image';
+
+      trigger.type = 'button';
+      trigger.className = 'article-image-trigger';
+      trigger.setAttribute('aria-label', `Expand ${description}`);
+      image.replaceWith(trigger);
+      trigger.append(image);
+
+      trigger.addEventListener('click', () => {
+        activeTrigger = trigger;
+        expandedImage.src = image.currentSrc || image.src;
+        expandedImage.alt = image.alt;
+        caption.textContent = figureCaption || '';
+        caption.hidden = !figureCaption;
+        dialog.showModal();
+      });
+    });
+
+    closeButton.addEventListener('click', () => dialog.close());
+    dialog.addEventListener('click', (event) => {
+      if (event.target === dialog) dialog.close();
+    });
+    dialog.addEventListener('close', () => {
+      expandedImage.removeAttribute('src');
+      activeTrigger?.focus();
+    });
+  }
+</script>

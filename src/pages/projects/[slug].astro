@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import { formatDate, projectOrder } from '@/data/site';
+import { formatDate, sortProjects } from '@/data/site';
 
 export async function getStaticPaths() {
   const projects = await getCollection('projects');
@@ -9,9 +9,10 @@ export async function getStaticPaths() {
 }
 
 const { project, projects } = Astro.props;
-const position = projectOrder.indexOf(project.id);
-const previous = position > 0 ? projects.find((entry) => entry.id === projectOrder[position - 1]) : undefined;
-const next = position < projectOrder.length - 1 ? projects.find((entry) => entry.id === projectOrder[position + 1]) : undefined;
+const orderedProjects = sortProjects(projects);
+const position = orderedProjects.findIndex((entry) => entry.id === project.id);
+const previous = position > 0 ? orderedProjects[position - 1] : undefined;
+const next = position < orderedProjects.length - 1 ? orderedProjects[position + 1] : undefined;
 const description = (project.data.description || `A project by Ulkar Aghayeva: ${project.data.title}`).slice(0, 220);
 ---
 
