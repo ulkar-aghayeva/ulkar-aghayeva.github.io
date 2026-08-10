@@ -1,0 +1,72 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { nav, projectOrder } from '@/data/site';
+
+const entries = await getCollection('projects');
+const projects = projectOrder.map((id) => entries.find((entry) => entry.id === id)).filter(Boolean);
+---
+
+<BaseLayout home>
+  <main id="main">
+    <section class="home-hero" aria-label="Introduction">
+      <nav class="piano" aria-label="Explore the site">
+        <p class="piano-label">Select a key</p>
+        <div class="white-keys">
+          <div class="white-key white-key--edge" aria-hidden="true"></div>
+          {nav.map((item, index) => (
+            <a class="white-key" href={item.href} style={`--key-index:${index}`}>
+              <span class="key-number">0{index + 1}</span>
+              <span>{item.label}</span>
+            </a>
+          ))}
+          <div class="white-key white-key--edge" aria-hidden="true"></div>
+        </div>
+        <div class="black-key black-key--1" aria-hidden="true"></div>
+        <div class="black-key black-key--2" aria-hidden="true"></div>
+        <div class="black-key black-key--3" aria-hidden="true"></div>
+        <div class="black-key black-key--4" aria-hidden="true"></div>
+        <div class="black-key black-key--5" aria-hidden="true"></div>
+      </nav>
+      <div class="home-identity">
+        <img class="home-portrait" src="/images/imported/-DSC09696-068066780.jpg" alt="Ulkar Aghayeva standing in front of a red Brooklyn shipping container" />
+        <div class="identity-card">
+          <img src="/images/imported/UA_music_inv-5f8f7c599.jpg" alt="" width="72" height="54" />
+          <p class="eyebrow">Science & music</p>
+          <h1>Ulkar Aghayeva</h1>
+          <p>science history, metascience, composition</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-program section-shell" aria-labelledby="projects-heading">
+      <div class="section-heading">
+        <p class="eyebrow">Selected work</p>
+        <h2 id="projects-heading">Projects</h2>
+        <a class="text-link" href="/projects">View all projects</a>
+      </div>
+      <ol class="project-program">
+        {projects.map((project, index) => project && (
+          <li>
+            <a href={`/projects/${project.id}`}>
+              <span class="program-number">{String(index + 1).padStart(2, '0')}</span>
+              <img src={project.data.featuredImage} alt="" loading="lazy" />
+              <span class="program-title">{project.data.title}</span>
+              <span class="program-arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <section class="home-about" aria-labelledby="about-heading">
+      <img src="/images/imported/DSCF1085-f9885c843.jpg" alt="Portrait of Ulkar Aghayeva outdoors" loading="lazy" />
+      <div>
+        <p class="eyebrow">About</p>
+        <h2 id="about-heading">Science, history, and a life in music</h2>
+        <p>I was born and raised in Baku, Azerbaijan. After high school I moved to Moscow to study biology, and then to New York City for doctoral research in developmental neuroscience.</p>
+        <a class="button-link" href="/about">Read the full biography</a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

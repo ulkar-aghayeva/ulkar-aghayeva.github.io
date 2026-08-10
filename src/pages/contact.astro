@@ -1,0 +1,39 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Contact" description="Contact Ulkar Aghayeva about science writing, music, and composition.">
+  <main id="main" class="page-shell contact-page">
+    <header class="page-intro">
+      <p class="eyebrow">Correspondence</p>
+      <h1>Contact</h1>
+      <p>Drop a note here: <a href="mailto:aghayeva.u@gmail.com">aghayeva.u@gmail.com</a></p>
+    </header>
+    <form class="contact-form" id="contact-form">
+      <div class="field-pair">
+        <label>First name <input name="firstName" autocomplete="given-name" required /></label>
+        <label>Last name <input name="lastName" autocomplete="family-name" required /></label>
+      </div>
+      <label>Email <input name="email" type="email" autocomplete="email" required /></label>
+      <label>Subject <input name="subject" required /></label>
+      <label>Message <textarea name="message" rows="9" required></textarea></label>
+      <button type="submit">Open email draft</button>
+      <p class="form-note" id="form-note">Your email application will open with this message. Nothing is sent automatically.</p>
+    </form>
+  </main>
+  <script>
+    const form = document.querySelector<HTMLFormElement>('#contact-form');
+    form?.addEventListener('submit', (event) => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+      const data = new FormData(form);
+      const first = String(data.get('firstName') || '');
+      const last = String(data.get('lastName') || '');
+      const email = String(data.get('email') || '');
+      const subject = String(data.get('subject') || '');
+      const message = String(data.get('message') || '');
+      const body = `${message}\n\nFrom: ${first} ${last}\nEmail: ${email}`;
+      window.location.href = `mailto:aghayeva.u@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+  </script>
+</BaseLayout>

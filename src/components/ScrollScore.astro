@@ -1,0 +1,45 @@
+<aside class="scroll-score" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+  <div class="scroll-score__staff" aria-hidden="true">
+    <i></i><i></i><i></i><i></i><i></i>
+  </div>
+  <span class="scroll-score__note" aria-hidden="true"></span>
+  <output class="scroll-score__value" aria-hidden="true">0%</output>
+</aside>
+
+<script>
+  const score = document.querySelector<HTMLElement>('.scroll-score');
+  const note = document.querySelector<HTMLElement>('.scroll-score__note');
+  const value = document.querySelector<HTMLOutputElement>('.scroll-score__value');
+
+  if (score && note && value) {
+    let hideTimer = 0;
+    let animationFrame = 0;
+
+    const update = () => {
+      animationFrame = 0;
+      const limit = document.documentElement.scrollHeight - innerHeight;
+      const progress = limit > 0 ? Math.min(1, Math.max(0, scrollY / limit)) : 0;
+      const percentage = Math.round(progress * 100);
+      const travel = Math.max(0, score.clientHeight - 54);
+      note.style.top = `${14 + progress * travel}px`;
+      value.value = `${percentage}%`;
+      score.setAttribute('aria-valuenow', String(percentage));
+      score.toggleAttribute('data-disabled', limit <= 0);
+    };
+
+    const scheduleUpdate = () => {
+      if (!animationFrame) animationFrame = requestAnimationFrame(update);
+    };
+
+    const reveal = () => {
+      scheduleUpdate();
+      score.setAttribute('data-visible', 'true');
+      clearTimeout(hideTimer);
+      hideTimer = window.setTimeout(() => score.removeAttribute('data-visible'), 850);
+    };
+
+    addEventListener('scroll', reveal, { passive: true });
+    addEventListener('resize', scheduleUpdate, { passive: true });
+    update();
+  }
+</script>

@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { formatDate } from '@/data/site';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const description = (post.data.description || `An essay by Ulkar Aghayeva: ${post.data.title}`).slice(0, 220);
+---
+
+<BaseLayout title={post.data.title} description={description} image={post.data.featuredImage} article publishedTime={post.data.date}>
+  <main id="main" class="article-shell">
+    <header class="article-header">
+      <a class="back-link" href="/blog">← Blog archive</a>
+      <p class="eyebrow">Essay</p>
+      <h1>{post.data.title}</h1>
+      <time datetime={post.data.date}>{formatDate(post.data.date)}</time>
+      {post.data.featuredImage && <img src={post.data.featuredImage} alt="" />}
+    </header>
+    <article class="prose article-body" set:html={post.body}></article>
+    <nav class="article-end" aria-label="Article navigation"><a href="/blog">Return to all writing</a></nav>
+  </main>
+</BaseLayout>

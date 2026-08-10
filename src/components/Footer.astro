@@ -1,0 +1,14 @@
+---
+import { socialLinks } from '@/data/site';
+---
+
+<footer class="site-footer">
+  <div>
+    <p class="footer-name">Ulkar Aghayeva</p>
+    <p>science history, metascience, composition</p>
+  </div>
+  <nav aria-label="Social links">
+    {socialLinks.map((item) => <a href={item.href} rel="noopener">{item.label}</a>)}
+  </nav>
+  <p>Site logo by <a href="https://twitter.com/imperialauditor" rel="noopener">@imperialauditor</a></p>
+</footer>
