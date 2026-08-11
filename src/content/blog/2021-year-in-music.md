@@ -4,7 +4,7 @@ date: "2021-12-31T20:08:00-0500"
 kind: "blog"
 sourceUrl: "https://www.ulkaraghayeva.com/blog/2021-year-in-music"
 featuredImage: "/images/imported/-kil-Bico_xal-as--547eb0fde.jpg"
-description: "I think overall I’ve listened to less music in the past year, since that was a year when I started writing music myself. A lot of what I’ve been listening to was in preparation to my writing. Here is a selection of albums and pieces that I’ve listened to repeatedly and enjoyed most, in no particular"
+description: "A collection of notable music from the 2021 listenings"
 ---
 
 <div><div><div><div><div><div>
