@@ -4,7 +4,7 @@ date: "2023-11-18T21:31:41-0500"
 kind: "blog"
 sourceUrl: "https://www.ulkaraghayeva.com/blog/2023-a-year-in-music"
 featuredImage: "/images/imported/DALL-E-carpet-05a2e58c1.png"
-description: "This year has been exceptionally rich in music that stunned and delighted me - both completely new discoveries and rediscoveries. I’m listing them in chronological order as I came across them.     Paul Wiancko  -  Benkei’s Standing Death ,  Cello Quartet ‘When the Night’  and  Vox Petra for 2 violas"
+description: "A collection of notable music from the 2023 listenings"
 ---
 
 <div><div><div><div><div><div>
