@@ -1,4 +1,5 @@
 import type { CollectionEntry } from 'astro:content';
+import { load } from 'cheerio';
 
 export const nav = [
   { href: '/about', label: 'About' },
@@ -28,6 +29,38 @@ export const getPreviewDescription = (
   if (!importedPreview) return fallback;
   if (importedPreview.length <= 180) return importedPreview;
   return `${importedPreview.slice(0, 177).trimEnd()}…`;
+};
+
+const legacyCreditPattern = /^(artwork|banner image|image credit|originally posted)\b/i;
+
+export const formatLegacyBlogBody = (body: string) => {
+  const $ = load(body, null, false);
+  const markers = $('p').filter((_, element) => /^\[\d+\]/.test($(element).text().trim()));
+  if (!markers.length) return body;
+
+  const firstMarker = markers.first().get(0);
+  const lastMarker = markers.last().get(0);
+  if (!firstMarker || !lastMarker) return body;
+
+  const parent = $(firstMarker).parent();
+  const siblings = parent.children().toArray();
+  const firstIndex = siblings.indexOf(firstMarker);
+  const lastIndex = siblings.indexOf(lastMarker);
+  const sameParent = markers.toArray().every((marker) => $(marker).parent().get(0) === parent.get(0));
+  if (!sameParent || firstIndex < 0 || lastIndex < firstIndex) return body;
+
+  let endIndex = siblings.length - 1;
+  for (let index = lastIndex + 1; index < siblings.length; index += 1) {
+    if (legacyCreditPattern.test($(siblings[index]).text().trim())) {
+      endIndex = index - 1;
+      break;
+    }
+  }
+
+  const section = $('<section class="footnotes legacy-footnotes" aria-label="Footnotes"></section>');
+  $(firstMarker).before(section);
+  siblings.slice(firstIndex, endIndex + 1).forEach((node) => section.append(node));
+  return $.html();
 };
 
 export const galleryImages = [
