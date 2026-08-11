@@ -4,7 +4,7 @@ date: "2024-12-27T20:42:37-0500"
 kind: "blog"
 sourceUrl: "https://www.ulkaraghayeva.com/blog/climbing-mount-mugham"
 featuredImage: "/images/imported/fire-blossom-1924-bbb8e43e7.jpg"
-description: "Chances are you’ve heard Azerbaijani mugham without being aware of it. The soundtrack of  Stalker  (1979) is based in part on the mugham  Bayati-Shiraz  performed on tar, a plucked string instrument with a characteristic metallic sound.   In the making of the opening theme,   Meditation  , the film"
+description: "A quest for transcendence"
 ---
 
 <div><div><div><div><div><div>
