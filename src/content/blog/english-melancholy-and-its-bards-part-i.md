@@ -4,7 +4,7 @@ date: "2024-12-10T21:59:53-0500"
 kind: "blog"
 sourceUrl: "https://www.ulkaraghayeva.com/blog/english-melancholy-and-its-bards-part-i"
 featuredImage: "/images/imported/angel-playing-lute-a60b2b9fd.jpg"
-description: "The English, from John Dowland to Radiohead, are the masters of melancholy. One is tempted to attribute this to their gloomy pluvial climes but whatever the reasons, no other nation has imbued the various shades of dolor with so much poignancy, enchantment and grace. And in no other time was the Eng"
+description: "Music of Renaissance England: John Dowland"
 ---
 
 <div><div><div><div><div><div>
