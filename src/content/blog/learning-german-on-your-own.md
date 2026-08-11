@@ -4,7 +4,7 @@ date: "2023-09-10T21:47:09-0400"
 kind: "blog"
 sourceUrl: "https://www.ulkaraghayeva.com/blog/learning-german-on-your-own"
 featuredImage: "/images/imported/DALL-E-2023-09-09-23.02.32---impressionistic-painting--15eb0b122.png"
-description: "In 2015, I started learning German in earnest and with much gusto. I love everything about this language - the way it sounds, the way words are built, and even the split verbs. I find language textbooks and apps rather unhelpful and boring, so I devised my own exploratory curriculum, starting with a"
+description: "if you dare"
 ---
 
 <div><div><div><div><div><div>
