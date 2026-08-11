@@ -35,19 +35,26 @@ const legacyCreditPattern = /^(artwork|banner image|image credit|originally post
 
 export const formatLegacyBlogBody = (body: string) => {
   const $ = load(body, null, false);
+  const poemFirstLines = new Set([
+    'The day has made me tired and worn,',
+    'Nun der Tag mich müd gemacht,',
+  ]);
+  const poems = $('div').filter((_, element) => poemFirstLines.has($(element).children('p').first().text().trim()));
+  poems.addClass('poem');
+
   const markers = $('p').filter((_, element) => /^\[\d+\]/.test($(element).text().trim()));
-  if (!markers.length) return body;
+  if (!markers.length) return poems.length ? $.html() : body;
 
   const firstMarker = markers.first().get(0);
   const lastMarker = markers.last().get(0);
-  if (!firstMarker || !lastMarker) return body;
+  if (!firstMarker || !lastMarker) return poems.length ? $.html() : body;
 
   const parent = $(firstMarker).parent();
   const siblings = parent.children().toArray();
   const firstIndex = siblings.indexOf(firstMarker);
   const lastIndex = siblings.indexOf(lastMarker);
   const sameParent = markers.toArray().every((marker) => $(marker).parent().get(0) === parent.get(0));
-  if (!sameParent || firstIndex < 0 || lastIndex < firstIndex) return body;
+  if (!sameParent || firstIndex < 0 || lastIndex < firstIndex) return poems.length ? $.html() : body;
 
   let endIndex = siblings.length - 1;
   for (let index = lastIndex + 1; index < siblings.length; index += 1) {
