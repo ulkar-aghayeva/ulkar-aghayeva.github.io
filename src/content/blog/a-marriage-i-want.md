@@ -4,7 +4,7 @@ date: "2024-05-12T14:13:20-0400"
 kind: "blog"
 sourceUrl: "https://www.ulkaraghayeva.com/blog/a-marriage-i-want"
 featuredImage: "/images/imported/Image-a18d03e19.jpeg"
-description: "My parents are very happy together. I think it’s fair to say that theirs is the happiest marriage in all of our extended family. Yet I cannot say that it is what I have wanted my own marriage to be like.&nbsp;  I find it difficult to describe my parents’ marriage using conventional terms of psyc"
+description: "Reflections on married life"
 ---
 
 <div><div><div><div><div><div>
