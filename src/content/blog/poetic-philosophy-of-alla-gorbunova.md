@@ -4,7 +4,7 @@ date: "2024-01-17T17:28:50-0500"
 kind: "blog"
 sourceUrl: "https://www.ulkaraghayeva.com/blog/poetic-philosophy-of-alla-gorbunova"
 featuredImage: "/images/imported/Image-bd58269b3.jpeg"
-description: "I first encountered the name of Alla Gorbunova in a  youtube video  by a prolific Russian literary critic Galina Yuzefovich [1]. She included Gorbunova’s book “ Ваша жестянка сломалась ” (~ “Your gadget is broken”, not yet officially translated into English) among her top 5 picks of the last year. I"
+description: "The Most Important Thing"
 ---
 
 <div><div><div><div><div><div>
