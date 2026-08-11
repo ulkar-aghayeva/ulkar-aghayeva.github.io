@@ -50,6 +50,38 @@ Regular paragraph text with *italics*, **bold text**, and [a link](https://examp
 
 The first image shown at the top and in the archive is controlled by `featuredImage`. Images placed in the article body use the final Markdown example above.
 
+### Footnotes
+
+Add a numbered footnote by putting a reference in the sentence and its definition later in the file:
+
+```md
+This sentence needs a source.[^1]
+
+[^1]: Write the footnote here. The site numbers it, makes it smaller, and adds links in both directions automatically.
+```
+
+The label can be any short identifier, such as `[^book]`, as long as the reference and definition match.
+
+### Poetry
+
+For close-spaced poetic lines with a larger break between stanzas, copy this block and replace the words:
+
+```html
+<div class="poem">
+<p>First line of the first stanza</p>
+<p>Second line</p>
+<p>Third line</p>
+<p>Fourth line</p>
+<p></p>
+<p>First line of the next stanza</p>
+<p>Second line</p>
+<p>Third line</p>
+<p>Fourth line</p>
+</div>
+```
+
+The empty `<p></p>` creates the stanza break. Add or remove line paragraphs as needed.
+
 ## Change gallery images or navigation
 
 Those lists live in `src/data/site.ts`. They can be edited from GitHub in the same way, but their bracket-and-comma formatting should be preserved.
