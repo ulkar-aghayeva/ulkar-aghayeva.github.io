@@ -6,7 +6,7 @@ interface Props {
   date: string;
   formattedDate: string;
   image: string;
-  description: string;
+  description?: string;
   number?: string;
 }
 
@@ -26,6 +26,6 @@ const Heading = variant === 'blog' ? 'h3' : 'h2';
   <img src={image} alt="" loading="lazy" />
   <div class="archive-entry__copy">
     <Heading>{title}</Heading>
-    <p>{description}</p>
+    {description && <p>{description}</p>}
   </div>
 </a>

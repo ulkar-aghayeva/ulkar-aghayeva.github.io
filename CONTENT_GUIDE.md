@@ -10,15 +10,15 @@ Everything below can be done from the GitHub website. You do not need to edit an
 4. Edit the text or the fields between the two `---` lines at the top.
 5. Click **Commit changes**. The website will rebuild automatically and normally updates within a few minutes.
 
-## Give an older entry a custom preview
+## Give an older project a custom preview
 
-Add this field between the `---` lines at the top of its file:
+Open its file in `src/content/projects` and add this field between the `---` lines at the top:
 
 ```yaml
-previewDescription: "The short description that should appear on the Blog or Projects page."
+previewDescription: "The short description that should appear on the Projects page."
 ```
 
-Keep it to roughly one or two sentences. If the field is absent or blank, the site automatically uses a shortened version of `description`.
+Keep it to roughly one or two sentences. If the field is absent or blank, the Projects page automatically uses a shortened version of `description`. Blog archive entries do not display preview descriptions.
 
 ## Add a blog post
 

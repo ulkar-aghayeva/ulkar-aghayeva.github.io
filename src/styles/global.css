@@ -146,9 +146,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .blog-archive ol { margin: 0; padding: 0; list-style: none; }
 .blog-archive li { border-top: 1px solid var(--line); }
 .blog-archive li:first-child { border-top: 0; }
-.blog-archive .archive-entry { display: grid; grid-template-columns: 7.5rem 72px 1fr; gap: 16px; align-items: center; min-height: 104px; padding: 16px 0; }
+.blog-archive .archive-entry { display: grid; grid-template-columns: 7.5rem 64px 1fr; gap: 16px; align-items: center; min-height: 88px; padding: 12px 0; }
 .blog-archive time { color: var(--graphite); font-family: var(--sans); font-size: .78rem; }
-.blog-archive img { width: 72px; height: 72px; object-fit: cover; }
+.blog-archive img { width: 64px; height: 64px; object-fit: cover; }
 .blog-archive .archive-entry__copy { display: grid; gap: 6px; }
 .blog-archive h3 { font-size: clamp(.95rem, 2vw, 1.3rem); line-height: 1.25; }
 .blog-archive .archive-entry__copy p { max-width: 62ch; overflow: hidden; font-family: var(--sans); font-size: .84rem; line-height: 1.4; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
