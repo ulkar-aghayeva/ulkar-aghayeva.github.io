@@ -4,7 +4,7 @@ date: "2024-12-01T20:45:29-0500"
 kind: "blog"
 sourceUrl: "https://www.ulkaraghayeva.com/blog/stray-thoughts-on-composition"
 featuredImage: "/images/imported/ulkar0121_a_tiny_door_in_the_wall_through_which_a_beau-674734a7f.jpeg"
-description: "Composition is an art of turning one’s auditory hallucinations into symbols interpretable by other people.   Robert Schumann: “In order to compose, all you need to do is remember a tune no one has thought of.”  When writing music, I feel like Alice peeking through the tiny door into the wondrous gar"
+description: "Composition is an art of turning one’s auditory hallucinations into symbols interpretable by other people.   Robert Schumann: “A medley"
 ---
 
 <div><div><div><div><div><div>
