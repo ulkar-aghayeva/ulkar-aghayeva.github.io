@@ -4,7 +4,7 @@ date: "2022-12-30T12:25:25-0500"
 kind: "blog"
 sourceUrl: "https://www.ulkaraghayeva.com/blog/2022-a-year-in-music"
 featuredImage: "/images/imported/22610462_carpet-3-6e9c16e79.jpeg"
-description: "This year brought a number of stunning discoveries - here are some of them, in chronological order as I came across them:   Shostakovich piano trios : 1st trio was written by a 16-year old Shostakovich and is a lovely, playful piece, so unlike most of his oeuvre. 2nd trio was composed during the war"
+description: "A collection of notable music from the 2022 listenings"
 ---
 
 <div><div><div><div><div><div>
