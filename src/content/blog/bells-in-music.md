@@ -4,7 +4,7 @@ date: "2024-09-11T15:06:22-0400"
 kind: "blog"
 sourceUrl: "https://www.ulkaraghayeva.com/blog/bells-in-music"
 featuredImage: "/images/imported/Image-a5a39d2fc.jpeg"
-description: "The bell motif is one of the most evocative recurrent motifs in Western and Russian classical music. ‘Bell’ is itself an almost onomatopoetic word, resounding and delightful to pronounce. So are the bells in other Indo-European languages: колокол/колокольчик, la campana/campanella, die Glocke… Churc"
+description: "For whom do they toll?"
 ---
 
 <div><div><div><div><div><div>
