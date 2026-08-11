@@ -5,7 +5,7 @@ kind: "project"
 order: 4
 sourceUrl: "https://www.ulkaraghayeva.com/projects/secret-project"
 featuredImage: "/images/imported/thumbnail-template-302f1634b.jpg"
-description: "In August 2023, I launched a new YouTube channel called ‘ Measure for measure ’ where I host conversations with musicians and music scholars.   Music speaks for itself but I find that music appreciation can be enormously enhanced by a close examination of its elements - melody, rhythm, and harmony -"
+description: "Conversations with musicians on select pieces"
 ---
 
 <div><div><div><div><div><div>
