@@ -4,7 +4,7 @@ date: "2024-06-13T16:17:23-0400"
 kind: "blog"
 sourceUrl: "https://www.ulkaraghayeva.com/blog/2024-january-june-half-a-year-in-music"
 featuredImage: "/images/imported/Image-7920d223b.jpeg"
-description: "Scriabin op. 57 (1907)    no. 1. Désir    &amp;    no. 2. Caresse dansée  . These two lovely ephemeral pieces both open with an incomplete version of Scriabin’s mystic chord C F♯ B E. The full version of the chord, consisting of an augmented fourth, diminished fourth, augmented fourth, and two p"
+description: "A collection of notable music from the first half of 2024"
 ---
 
 <div><div><div><div><div><div>
