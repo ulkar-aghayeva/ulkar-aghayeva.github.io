@@ -4,7 +4,7 @@ date: "2024-11-21T13:50:37-0500"
 kind: "blog"
 sourceUrl: "https://www.ulkaraghayeva.com/blog/on-french-music"
 featuredImage: "/images/imported/Picture5-6929a8d0e.jpeg"
-description: "Music by French and Flemish composers has the unique quality of meshing and braiding with the threads and fibers of my soul. This holds across the entire span of music history — from 12th to 20th century (I’m leaving out the 21st for now). Music from other lands speaks to me from narrower historical"
+description: "Voices from the faerie realm"
 ---
 
 <div><div><div><div><div><div>
