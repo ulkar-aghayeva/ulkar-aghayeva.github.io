@@ -4,7 +4,7 @@ date: "2025-02-06T12:02:00-0500"
 kind: "blog"
 sourceUrl: "https://www.ulkaraghayeva.com/blog/epiphany-in-music"
 featuredImage: "/images/imported/call-of-the-sky-1935-2963620ca.jpg"
-description: "The emotional landscape of music is a terrain no less variegated, scenic and wondrous than the one we walk on. It has its valleys and mountain ranges, wellsprings and oceans, cliffs and waves splashing beneath them. Sometimes you walk off such a cliff and find yourself falling down, with a terrible"
+description: "Sonic revelations"
 ---
 
 <div><div><div><div><div><div>
