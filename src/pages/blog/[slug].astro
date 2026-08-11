@@ -19,7 +19,6 @@ const legacyBody = MarkdownContent ? '' : formatLegacyBlogBody(post.body ?? '');
   <main id="main" class="article-shell blog-article">
     <header class="article-header">
       <a class="back-link" href="/blog">← Blog archive</a>
-      <p class="eyebrow">Essay</p>
       <h1>{post.data.title}</h1>
       <time datetime={post.data.date}>{formatDate(post.data.date)}</time>
       {post.data.featuredImage && <img src={post.data.featuredImage} alt="" />}

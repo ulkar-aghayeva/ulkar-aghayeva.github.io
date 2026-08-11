@@ -21,7 +21,6 @@ const MarkdownContent = project.data.format === 'markdown' ? (await render(proje
   <main id="main" class="article-shell project-article">
     <header class="article-header">
       <a class="back-link" href="/projects">← Projects</a>
-      <p class="eyebrow">Project</p>
       <h1>{project.data.title}</h1>
       <time datetime={project.data.date}>{formatDate(project.data.date)}</time>
       {project.data.featuredImage && <img src={project.data.featuredImage} alt="" />}

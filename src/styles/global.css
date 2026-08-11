@@ -28,7 +28,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 .skip-link { position: fixed; z-index: 100; top: 8px; left: 8px; padding: 8px 16px; color: var(--paper); background: var(--red); transform: translateY(-160%); }
 .skip-link:focus { transform: none; }
-.eyebrow { margin: 0 0 8px; color: var(--red); font-family: var(--sans); font-size: 0.76rem; font-weight: 600; letter-spacing: 0.16em; line-height: 1.4; text-transform: uppercase; }
 
 .site-header { position: relative; z-index: 20; display: flex; align-items: center; justify-content: space-between; min-height: 72px; padding: 8px clamp(24px, 4vw, 64px); color: var(--paper); background: var(--black); border-bottom: 1px solid rgba(255,255,255,.18); }
 .brand { display: inline-flex; gap: 12px; align-items: center; font-size: .9rem; text-decoration: none; }
@@ -63,7 +62,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .home-hero { display: grid; min-height: 100svh; background: var(--black); }
 .home-identity { position: relative; display: grid; min-height: 100svh; overflow: hidden; background: var(--ivory); }
 .identity-card { display: flex; flex-direction: column; justify-content: center; min-width: 0; padding: clamp(40px, 9vw, 88px) clamp(24px, 8vw, 72px); background: var(--ivory); }
-.identity-card img { width: 64px; height: 48px; margin-bottom: 20px; object-fit: cover; }
+.identity-card img { width: 128px; height: 96px; margin-bottom: 28px; object-fit: cover; }
 .identity-card h1 { max-width: 9ch; margin: 0 0 16px; font-size: clamp(2.25rem, 12vw, 4.8rem); line-height: .98; letter-spacing: -.045em; }
 .identity-tagline { max-width: 27ch; margin: 0; color: var(--red); font-family: var(--sans); font-size: clamp(.94rem, 3.8vw, 1.12rem); letter-spacing: .035em; }
 
@@ -109,14 +108,14 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .home-about img { width: 100%; height: 62svh; object-fit: cover; object-position: center 42%; }
 .home-about > div { align-self: center; max-width: 42rem; padding: 64px 24px 80px; }
 .home-about h2 { max-width: 13ch; margin: 0 0 24px; font-size: clamp(2rem, 8vw, 4.5rem); line-height: 1.05; letter-spacing: -.04em; }
-.home-about p:not(.eyebrow) { max-width: 48ch; }
+.home-about p { max-width: 48ch; }
 .button-link { display: inline-block; margin-top: 24px; padding: 12px 20px; color: var(--paper); background: var(--red); border: 1px solid var(--red); font-family: var(--sans); text-decoration: none; transition: color 180ms ease, background 180ms ease; }
 .button-link:hover, .button-link:focus-visible { color: var(--black); background: var(--ivory); }
 
 .page-shell { padding-block: clamp(64px, 9vw, 128px); }
 .page-intro { max-width: 52rem; margin-bottom: clamp(56px, 8vw, 104px); }
 .page-intro--wide { max-width: 64rem; }
-.page-intro > p:not(.eyebrow) { max-width: 52ch; margin: 24px 0 0; color: var(--graphite); font-size: clamp(1.05rem, 2vw, 1.3rem); }
+.page-intro > p { max-width: 52ch; margin: 24px 0 0; color: var(--graphite); font-size: clamp(1.05rem, 2vw, 1.3rem); }
 .about-intro { max-width: none; }
 .about-intro h1 { white-space: nowrap; font-size: clamp(1.65rem, 7.5vw, 5.7rem); }
 .about-layout { display: grid; gap: 48px; }
@@ -241,14 +240,14 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .piano { grid-column: 2; grid-row: 1; height: 100%; min-height: 0; }
   .home-identity { grid-column: 1; grid-row: 1; height: 100%; min-height: 0; border-right: 1px solid var(--black); }
   .identity-card { max-width: none; min-height: 0; padding: clamp(32px, 5vw, 72px); }
-  .identity-card img { width: 56px; height: 42px; margin-bottom: clamp(16px, 2vh, 24px); }
+  .identity-card img { width: 144px; height: 108px; margin-bottom: clamp(24px, 3vh, 32px); }
   .identity-card h1 { max-width: none; font-size: clamp(2.7rem, 4.5vw, 5.2rem); }
   .identity-tagline { font-size: clamp(.92rem, 1.15vw, 1.08rem); }
   .white-key { padding-block: clamp(8px, 2vh, 24px); padding-left: clamp(32px, 5vw, 80px); }
   .white-key > span:last-child { font-size: clamp(1.4rem, min(3.5vw, 5.2vh), 3.8rem); }
   .black-key { width: 52%; }
   .section-heading { grid-template-columns: 1fr auto; }
-  .section-heading .eyebrow, .section-heading h2 { grid-column: 1; }
+  .section-heading h2 { grid-column: 1; }
   .section-heading .text-link { grid-column: 2; grid-row: 1 / 3; }
   .project-program a { grid-template-columns: 48px 112px 1fr 32px; gap: 24px; min-height: 144px; }
   .project-program img { width: 112px; height: 96px; }
