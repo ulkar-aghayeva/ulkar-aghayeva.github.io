@@ -115,6 +115,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .page-intro { max-width: 52rem; margin-bottom: clamp(56px, 8vw, 104px); }
 .page-intro--wide { max-width: 64rem; }
 .page-intro > p:not(.eyebrow) { max-width: 52ch; margin: 24px 0 0; color: var(--graphite); font-size: clamp(1.05rem, 2vw, 1.3rem); }
+.about-intro { max-width: none; }
+.about-intro h1 { white-space: nowrap; font-size: clamp(1.65rem, 7.5vw, 5.7rem); }
 .about-layout { display: grid; gap: 48px; }
 .about-layout figure { margin: 0; }
 .about-layout figure img { width: 100%; max-height: 60rem; object-fit: cover; }
