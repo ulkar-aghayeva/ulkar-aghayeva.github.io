@@ -4,7 +4,7 @@ date: "2024-12-21T14:39:51-0500"
 kind: "blog"
 sourceUrl: "https://www.ulkaraghayeva.com/blog/narrativic-and-textural-modes-of-listening"
 featuredImage: "/images/imported/ulkar0121_one_side_of_the_image_is_glowing_jagged_blue-2d792d184.jpeg"
-description: "Complexity in music can manifest itself in many ways. One way to look at it is horizontal vs vertical: how a piece develops over time, as a narrative, vs what the discernible textural layers are. These two kinds of complexity map, albeit not perfectly, to different modes of listening, harmonic (or n"
+description: "A matter of taste?"
 ---
 
 <div><div><div><div><div><div>
