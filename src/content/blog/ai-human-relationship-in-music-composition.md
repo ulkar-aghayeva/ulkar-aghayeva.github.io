@@ -4,7 +4,7 @@ date: "2023-07-30T21:27:01-0400"
 kind: "blog"
 sourceUrl: "https://www.ulkaraghayeva.com/blog/ai-human-relationship-in-music-composition"
 featuredImage: "/images/imported/ulkar0121_AI_composer_digital_art_impressionistic_swir-4bb80b9bc.png"
-description: "This is a short essay I wrote in May 2023, it was commissioned by  Perfect Sound Forever , an online magazine of music commentary. The prompt for the essay is this:    The ability of AI to make text, images and sound is improving at a rapid pace. Does this affect how you think about your own music?"
+description: "The ability of AI to make text, images and sound is improving at a rapid pace. Does this affect how you think about your own music?"
 ---
 
 <div><div><div><div><div><div>
