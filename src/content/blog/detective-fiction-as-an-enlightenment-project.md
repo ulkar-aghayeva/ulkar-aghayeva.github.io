@@ -4,7 +4,7 @@ date: "2024-04-21T21:03:06-0400"
 kind: "blog"
 sourceUrl: "https://www.ulkaraghayeva.com/blog/detective-fiction-as-an-enlightenment-project"
 featuredImage: "/images/imported/image-c275980e9.png"
-description: "In the following, I’m drawing upon a lecture by   Aaron Marc Stein, The Detective Story — How and Why (1974)   and   an episode   of a Russian literary podcast “Книжный базар” (“Book fair”).  The origins of detective fiction as a genre are canonically traced to Edgar Poe’s short stories published in"
+description: "Presumption of innocence and the rise of detective fiction"
 ---
 
 <div><div><div><div><div><div>
