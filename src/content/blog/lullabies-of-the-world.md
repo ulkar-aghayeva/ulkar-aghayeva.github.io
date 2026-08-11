@@ -4,7 +4,7 @@ date: "2024-08-09T14:31:03-0400"
 kind: "blog"
 sourceUrl: "https://www.ulkaraghayeva.com/blog/lullabies-of-the-world"
 featuredImage: "/images/imported/-_--0f281110b.jpg"
-description: "Origins and form of lullabies    Project Lullabies of the World    Lullabies I love       Origins and form of lullabies     Lullabies are among the saddest songs of humankind. Musically, their sadness is not of a grieving or lacerating or heavy kind, however — but rather, most often, of soft melanch"
+description: "An ethnomusicologist's dream"
 ---
 
 <div><div><div><div><div><div>
