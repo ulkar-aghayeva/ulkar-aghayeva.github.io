@@ -4,7 +4,7 @@ date: "2024-11-28T20:42:48-0500"
 kind: "blog"
 sourceUrl: "https://www.ulkaraghayeva.com/blog/bach-and-scriabin-the-apollonian-and-dionysian-in-music"
 featuredImage: "/images/imported/title-image.001-f85ae555b.jpeg"
-description: "It is hard to think of another pair of composers as diametrically opposed along so many dimensions as are J. S. Bach and Alexander Scriabin. Yet they don’t cleanly map onto the Apollonian and Dionysian, as it may seem at first. Bach, though he may be a devout Protestant, and Scriabin, an inspired tr"
+description: "Two composers at the edge of human experience"
 ---
 
 <div><div><div><div><div><div>
