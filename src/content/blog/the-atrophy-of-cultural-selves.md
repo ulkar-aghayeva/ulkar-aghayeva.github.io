@@ -4,7 +4,7 @@ date: "2023-10-22T21:00:33-0400"
 kind: "blog"
 sourceUrl: "https://www.ulkaraghayeva.com/blog/the-atrophy-of-cultural-selves"
 featuredImage: "/images/imported/DALL-E-2024-01-15-1kite-edb74ba2c.png"
-description: "There is a tension between linguistic notions of identity and communication that I think extends beyond language per se. Identity  has to do with expressing one’s internal state, one’s thoughts and feelings, as precisely as possible, and in that it is speaker-centric. Most people can come closest to"
+description: "Communicating across chasms"
 ---
 
 <div><div><div><div><div><div>
