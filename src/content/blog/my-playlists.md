@@ -4,7 +4,7 @@ date: "2024-07-18T17:57:09-0400"
 kind: "blog"
 sourceUrl: "https://www.ulkaraghayeva.com/blog/my-playlists"
 featuredImage: "/images/imported/ulkar0121_playlists-6b52127f9.jpeg"
-description: "My playlists contain music that I felt compelled to save outside of their original albums. I use Apple Music, so all my playlists live there and will be linked in this post. They are usually organized by composer, theme or a particular piece where I collect different recordings or instrumental arran"
+description: "Collected here for the benefit of humanity"
 ---
 
 <div><div><div><div><div><div>
