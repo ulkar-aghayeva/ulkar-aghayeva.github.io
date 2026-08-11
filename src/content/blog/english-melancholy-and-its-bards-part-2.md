@@ -4,7 +4,7 @@ date: "2024-12-16T13:17:18-0500"
 kind: "blog"
 sourceUrl: "https://www.ulkaraghayeva.com/blog/english-melancholy-and-its-bards-part-2"
 featuredImage: "/images/imported/Lady_Seated_at_a_Virginal-_Vermeer-_The_National_Galle-5f2201c9c.jpg"
-description: "The English Virginalist School   My entry point to the music of the English Renaissance was  Glenn Gould’s recordings  of a few pieces by William Byrd and Orlando Gibbons. It was an entirely new soundworld to me, one of strange harmonies and stately elegance. I had to investigate further."
+description: "The English Virginalist School"
 ---
 
 <div><div><div><div><div><div>
