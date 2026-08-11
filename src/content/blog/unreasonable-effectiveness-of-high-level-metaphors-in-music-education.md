@@ -4,7 +4,7 @@ date: "2024-05-28T23:07:01-0400"
 kind: "blog"
 sourceUrl: "https://www.ulkaraghayeva.com/blog/unreasonable-effectiveness-of-high-level-metaphors-in-music-education"
 featuredImage: "/images/imported/ulkar0121_Unreasonable_effectiveness_of_high-level_met-b7bc69b8c.jpeg"
-description: "A friend of mine, a theoretical physicist turned contemporary dancer, once told me about the distinct instruction styles of two dance teachers she was studying with at the time. One of them would describe precisely which muscle groups one needs to activate to achieve a particular posture or motion,"
+description: "Learning through mechanisms and metaphors"
 ---
 
 <div><div><div><div><div><div>
