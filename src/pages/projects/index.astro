@@ -12,7 +12,7 @@ const projects = sortProjects(entries);
   <main id="main" class="page-shell">
     <header class="page-intro page-intro--wide">
       <h1>Projects</h1>
-      <p>Writing and listening across science history, metascience, performance, and composition.</p>
+      <p>Writing about science history, music criticism, and composition.</p>
     </header>
     <ol class="project-index">
       {projects.map((project, index) => (
@@ -24,7 +24,7 @@ const projects = sortProjects(entries);
             date={project.data.date}
             formattedDate={formatDate(project.data.date)}
             image={project.data.featuredImage}
-            description={getPreviewDescription(project.data, 'Read the complete project notes and listen to the recordings.')}
+            description={getPreviewDescription(project.data, 'Call of the muse.')}
             number={String(index + 1).padStart(2, '0')}
           />
         </li>
